@@ -1,0 +1,40 @@
+name: paper desk
+
+# Two runs each weekday, because one GitHub Actions job may run 6 hours at most:
+#   08:00 IST -> 12:15 IST  (scheduled early: GitHub often starts scheduled jobs late)
+#   12:10 IST -> 15:35 IST  (queues behind the morning run, then picks up its saved state)
+# NSE holidays: the engine sees the date and exits at once.
+on:
+  schedule:
+    - cron: "30 2 * * 1-5"   # 02:30 UTC = 08:00 IST
+    - cron: "40 6 * * 1-5"   # 06:40 UTC = 12:10 IST
+  workflow_dispatch:
+    inputs:
+      until:
+        description: "Run until (IST, HH:MM)"
+        default: "15:35"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-desk
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pick the end of this session
+        run: |
+          if [ -n "${{ github.event.inputs.until }}" ]; then UNTIL="${{ github.event.inputs.until }}";
+          elif [ "$(date -u +%H%M)" -lt 0630 ]; then UNTIL="12:15";
+          else UNTIL="15:35"; fi
+          echo "UNTIL=$UNTIL" >> "$GITHUB_ENV"
+          echo "This run trades until $UNTIL IST."
+      - name: Paper engine
+        run: sh ci/run.sh "$UNTIL"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

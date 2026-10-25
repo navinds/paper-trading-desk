@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+trading/trader/paper/*.log
+trading/trader/paper/inbox.jsonl
+.DS_Store

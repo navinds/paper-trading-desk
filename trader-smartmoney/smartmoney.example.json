@@ -1,0 +1,20 @@
+{
+  "note": "Names to flag in bulk and block deals and insider disclosures. Matching is by part of the name, any case. Edit freely.",
+  "investors": [
+    "RADHAKISHAN DAMANI",
+    "DERIVE TRADING",
+    "REKHA JHUNJHUNWALA",
+    "ASHISH KACHOLIA",
+    "VIJAY KISHANLAL KEDIA",
+    "DOLLY KHANNA",
+    "MUKUL AGRAWAL",
+    "ABAKKUS",
+    "PORINJU",
+    "NEMISH SHAH",
+    "LIFE INSURANCE CORPORATION",
+    "GOVERNMENT OF SINGAPORE",
+    "GOLDMAN SACHS",
+    "MORGAN STANLEY",
+    "SOCIETE GENERALE"
+  ]
+}

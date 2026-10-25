@@ -1,0 +1,100 @@
+ABB|ABB India Ltd.
+ADANIENSOL|Adani Energy Solutions Ltd.
+ADANIENT|Adani Enterprises Ltd.
+ADANIGREEN|Adani Green Energy Ltd.
+ADANIPORTS|Adani Ports and Special Economic Zone Ltd.
+ADANIPOWER|Adani Power Ltd.
+AMBUJACEM|Ambuja Cements Ltd.
+APOLLOHOSP|Apollo Hospitals Enterprise Ltd.
+ASIANPAINT|Asian Paints Ltd.
+AXISBANK|Axis Bank Ltd.
+BAJAJ-AUTO|Bajaj Auto Ltd.
+BAJAJFINSV|Bajaj Finserv Ltd.
+BAJAJHLDNG|Bajaj Holdings & Investment Ltd.
+BAJFINANCE|Bajaj Finance Ltd.
+BANKBARODA|Bank of Baroda
+BEL|Bharat Electronics Ltd.
+BHARTIARTL|Bharti Airtel Ltd.
+BOSCHLTD|Bosch Ltd.
+BPCL|Bharat Petroleum Corporation Ltd.
+BRITANNIA|Britannia Industries Ltd.
+BSE|BSE Ltd.
+CANBK|Canara Bank
+CGPOWER|CG Power and Industrial Solutions Ltd.
+CHOLAFIN|Cholamandalam Investment and Finance Company Ltd.
+CIPLA|Cipla Ltd.
+COALINDIA|Coal India Ltd.
+CUMMINSIND|Cummins India Ltd.
+DIVISLAB|Divi's Laboratories Ltd.
+DLF|DLF Ltd.
+DMART|Avenue Supermarts Ltd.
+DRREDDY|Dr. Reddy's Laboratories Ltd.
+EICHERMOT|Eicher Motors Ltd.
+ENRIN|Siemens Energy India Ltd.
+ETERNAL|Eternal Ltd.
+GAIL|GAIL (India) Ltd.
+GODREJCP|Godrej Consumer Products Ltd.
+GRASIM|Grasim Industries Ltd.
+HAL|Hindustan Aeronautics Ltd.
+HCLTECH|HCL Technologies Ltd.
+HDFCAMC|HDFC Asset Management Company Ltd.
+HDFCBANK|HDFC Bank Ltd.
+HDFCLIFE|HDFC Life Insurance Company Ltd.
+HINDALCO|Hindalco Industries Ltd.
+HINDUNILVR|Hindustan Unilever Ltd.
+HINDZINC|Hindustan Zinc Ltd.
+HYUNDAI|Hyundai Motor India Ltd.
+ICICIBANK|ICICI Bank Ltd.
+IDEA|Vodafone Idea Ltd.
+INDIGO|InterGlobe Aviation Ltd.
+INFY|Infosys Ltd.
+IOC|Indian Oil Corporation Ltd.
+IRFC|Indian Railway Finance Corporation Ltd.
+ITC|ITC Ltd.
+JINDALSTEL|Jindal Steel Ltd.
+JIOFIN|Jio Financial Services Ltd.
+JSWSTEEL|JSW Steel Ltd.
+KOTAKBANK|Kotak Mahindra Bank Ltd.
+LT|Larsen & Toubro Ltd.
+LTM|LTM Ltd.
+M&M|Mahindra & Mahindra Ltd.
+MARUTI|Maruti Suzuki India Ltd.
+MAXHEALTH|Max Healthcare Institute Ltd.
+MAZDOCK|Mazagoan Dock Shipbuilders Ltd.
+MOTHERSON|Samvardhana Motherson International Ltd.
+MUTHOOTFIN|Muthoot Finance Ltd.
+NESTLEIND|Nestle India Ltd.
+NTPC|NTPC Ltd.
+ONGC|Oil & Natural Gas Corporation Ltd.
+PFC|Power Finance Corporation Ltd.
+PIDILITIND|Pidilite Industries Ltd.
+PNB|Punjab National Bank
+POLYCAB|Polycab India Ltd.
+POWERGRID|Power Grid Corporation of India Ltd.
+POWERINDIA|Hitachi Energy India Ltd.
+RELIANCE|Reliance Industries Ltd.
+SBILIFE|SBI Life Insurance Company Ltd.
+SBIN|State Bank of India
+SHRIRAMFIN|Shriram Finance Ltd.
+SIEMENS|Siemens Ltd.
+SOLARINDS|Solar Industries India Ltd.
+SUNPHARMA|Sun Pharmaceutical Industries Ltd.
+TATACAP|Tata Capital Ltd.
+TATACONSUM|Tata Consumer Products Ltd.
+TATAPOWER|Tata Power Co. Ltd.
+TATASTEEL|Tata Steel Ltd.
+TCS|Tata Consultancy Services Ltd.
+TECHM|Tech Mahindra Ltd.
+TITAN|Titan Company Ltd.
+TMCV|Tata Motors Ltd.
+TMPV|Tata Motors Passenger Vehicles Ltd.
+TORNTPHARM|Torrent Pharmaceuticals Ltd.
+TRENT|Trent Ltd.
+TVSMOTOR|TVS Motor Company Ltd.
+ULTRACEMCO|UltraTech Cement Ltd.
+UNIONBANK|Union Bank of India
+VAML|Vedanta Aluminium Metal Ltd.
+VBL|Varun Beverages Ltd.
+VEDL|Vedanta Ltd.
+WIPRO|Wipro Ltd.
+ZYDUSLIFE|Zydus Lifesciences Ltd.

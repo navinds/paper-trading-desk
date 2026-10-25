@@ -1,0 +1,50 @@
+{
+  "source": "Yahoo Finance fundamentals (unofficial)",
+  "currency": "INR",
+  "rows": [
+    {
+      "symbol": "HDFCBANK",
+      "quarter_end": "2025-06-30",
+      "fiscal": "Q1 FY26",
+      "ttm_revenue_cr": null,
+      "ttm_net_income_cr": null,
+      "ttm_eps_diluted": null,
+      "revenue_yoy_pct": null,
+      "eps_yoy_pct": null,
+      "operating_margin_pct": null,
+      "net_margin_pct": 19.0,
+      "ttm_missing": [
+        "Q3 FY25",
+        "Q2 FY25"
+      ]
+    },
+    {
+      "symbol": "RELIANCE",
+      "quarter_end": "2026-06-30",
+      "fiscal": "Q1 FY27",
+      "ttm_revenue_cr": null,
+      "ttm_net_income_cr": null,
+      "ttm_eps_diluted": null,
+      "revenue_yoy_pct": 27.0,
+      "eps_yoy_pct": -22.4,
+      "operating_margin_pct": 10.5,
+      "net_margin_pct": 6.8,
+      "ttm_missing": [
+        "Q2 FY26"
+      ]
+    },
+    {
+      "symbol": "TCS",
+      "quarter_end": "2026-09-30",
+      "fiscal": "Q2 FY27",
+      "ttm_revenue_cr": 283248.0,
+      "ttm_net_income_cr": 51608.0,
+      "ttm_eps_diluted": 142.66,
+      "revenue_yoy_pct": null,
+      "eps_yoy_pct": null,
+      "operating_margin_pct": 24.0,
+      "net_margin_pct": 19.0,
+      "ttm_missing": []
+    }
+  ]
+}
