@@ -9,9 +9,11 @@ Paper trading on the live NSE market with fake money, run for free on GitHub Act
 
 ## How it runs
 
-Two GitHub Actions runs each weekday (`.github/workflows/desk.yml`): 08:00 to 12:15 IST and 12:10 to 15:35 IST,
-because one job may run 6 hours at most. The engine (`trader-paper/paper.py`) saves the account to the
-`data` branch every 5 minutes; the next run picks it up from there. NSE holidays: the engine exits at once.
+GitHub Actions (`.github/workflows/desk.yml`) tries to start the desk every 30 minutes from 07:30 to 15:30 IST
+on weekdays, because GitHub's schedule is best effort (some starts are late, some never happen). One run trades
+at a time; the others wait. Each run stops before GitHub's 6-hour limit or at 15:35 IST, and the engine
+(`trader-paper/paper.py`) saves the account to the `data` branch every 5 minutes, so the next run carries on
+from there. NSE holidays: the engine exits at once.
 
 Before trusting it, run **Actions > data check > Run workflow** once: it checks that Yahoo Finance and NSE
 answer GitHub's servers.

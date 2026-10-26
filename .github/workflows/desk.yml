@@ -1,18 +1,16 @@
 name: paper desk
 
-# Two runs each weekday, because one GitHub Actions job may run 6 hours at most:
-#   08:00 IST -> 12:15 IST  (scheduled early: GitHub often starts scheduled jobs late)
-#   12:10 IST -> 15:35 IST  (queues behind the morning run, then picks up its saved state)
+# GitHub runs scheduled jobs on a best-effort basis: some start late, some never start.
+# So the desk tries to start every 30 minutes from 07:30 to 15:30 IST on weekdays.
+# Only one run trades at a time (the concurrency group below); a start attempt that finds the
+# desk already running waits, then carries on from the saved account. Each run stops before
+# GitHub's 6-hour limit or at 15:35 IST, whichever comes first, and the next attempt takes over.
 # NSE holidays: the engine sees the date and exits at once.
 on:
   schedule:
-    - cron: "30 2 * * 1-5"   # 02:30 UTC = 08:00 IST
-    - cron: "40 6 * * 1-5"   # 06:40 UTC = 12:10 IST
+    - cron: "0,30 2-9 * * 1-5"   # 02:00-09:30 UTC = 07:30-15:00 IST, every 30 minutes
+    - cron: "0 10 * * 1-5"       # 10:00 UTC = 15:30 IST, a last try to close and save
   workflow_dispatch:
-    inputs:
-      until:
-        description: "Run until (IST, HH:MM)"
-        default: "15:35"
 
 permissions:
   contents: write
@@ -24,17 +22,22 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 355
+    timeout-minutes: 358
     steps:
-      - uses: actions/checkout@v4
-      - name: Pick the end of this session
+      - name: Is there anything left to do today?
         run: |
-          if [ -n "${{ github.event.inputs.until }}" ]; then UNTIL="${{ github.event.inputs.until }}";
-          elif [ "$(date -u +%H%M)" -lt 0630 ]; then UNTIL="12:15";
-          else UNTIL="15:35"; fi
+          now=$(( $(date -u +%s) + 19800 ))                 # IST = UTC + 5:30
+          mins=$(( (now % 86400) / 60 ))                    # minutes since IST midnight
+          end=$(( 15 * 60 + 35 ))
+          if [ "$mins" -ge "$end" ]; then echo "SKIP=1" >> "$GITHUB_ENV"; echo "After 15:35 IST: nothing to do."; exit 0; fi
+          stop=$(( mins + 350 )); [ "$stop" -gt "$end" ] && stop=$end
+          UNTIL=$(printf "%02d:%02d" $(( stop / 60 )) $(( stop % 60 )))
           echo "UNTIL=$UNTIL" >> "$GITHUB_ENV"
           echo "This run trades until $UNTIL IST."
+      - uses: actions/checkout@v4
+        if: env.SKIP != '1'
       - name: Paper engine
+        if: env.SKIP != '1'
         run: sh ci/run.sh "$UNTIL"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
